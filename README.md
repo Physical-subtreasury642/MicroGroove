@@ -11,8 +11,8 @@ Firmware for the **M5Stack Cardputer-ADV**, by [lebiro.studio](https://lebiro.st
 **Print it. Flash it. Jam.**
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-orange)](LICENSE)
-[![Ko-fi](https://img.shields.io/badge/support-Ko--fi-ff5e5b)](https://ko-fi.com/makarov87)
-<!-- TODO: confirm Ko-fi URL; add M5Burner badge once the submission is accepted -->
+[![Support on Ko-fi](https://img.shields.io/badge/Ko--fi-support%20the%20project-ff5e5b?logo=ko-fi&logoColor=white)](https://ko-fi.com/makarov87)
+<!-- TODO: add M5Burner badge once the submission is accepted -->
 
 ## What it does
 
