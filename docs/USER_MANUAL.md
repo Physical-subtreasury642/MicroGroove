@@ -154,7 +154,7 @@ Eight slots on the card (`P1.gbx`–`P8.gbx`) store everything: patterns, song c
 
 ## Build & flash
 
-Arduino IDE or PlatformIO: install ESP32 board support and the **M5Cardputer** library, select the M5Cardputer board (or ESP32-S3 Dev Module with USB CDC on boot), open `Microgroove.ino`, flash. Pre-built binaries are on the Releases page and in M5Burner for a no-IDE install. Full details in the repo README.
+Arduino IDE or PlatformIO: install ESP32 board support and the **M5Cardputer** library, select the M5Cardputer board (or ESP32-S3 Dev Module with USB CDC on boot), open `Microgroove.ino`, flash. A pre-built binary is on the Releases page for flashing without the Arduino IDE. Full details in the repo README.
 
 ---
 

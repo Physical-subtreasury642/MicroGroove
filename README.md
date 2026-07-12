@@ -12,7 +12,6 @@ Firmware for the **M5Stack Cardputer-ADV**, by [lebiro.studio](https://lebiro.st
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-orange)](LICENSE)
 [![Support on Ko-fi](https://img.shields.io/badge/Ko--fi-support%20the%20project-ff5e5b?logo=ko-fi&logoColor=white)](https://ko-fi.com/makarov87)
-<!-- TODO: add M5Burner badge once the submission is accepted -->
 
 ## What it does
 
@@ -38,13 +37,10 @@ Full feature tour and guides: **[docs/USER_MANUAL.md](docs/USER_MANUAL.md)**
 
 ## Get it running
 
-**Option 1 — M5Burner (no IDE):** open M5Burner, find *Microgroove* under Cardputer, flash.
-<!-- TODO: link once accepted -->
-
-**Option 2 — pre-built binary:** grab `microgroove.bin` from
+**Option 1 — pre-built binary:** grab `microgroove.bin` from
 [Releases](../../releases) and flash with your ESP32 tool of choice.
 
-**Option 3 — build from source:** Arduino IDE or PlatformIO. Install ESP32 board
+**Option 2 — build from source:** Arduino IDE or PlatformIO. Install ESP32 board
 support and the **M5Cardputer** library (pulls in M5Unified/M5GFX), select the
 *M5Cardputer* board (or ESP32S3 Dev Module with USB CDC on boot), open
 `Microgroove.ino`, flash.
