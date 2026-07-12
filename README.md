@@ -37,13 +37,21 @@ Full feature tour and guides: **[docs/USER_MANUAL.md](docs/USER_MANUAL.md)**
 
 ## Get it running
 
-**Option 1 — pre-built binary:** grab `microgroove.bin` from
-[Releases](../../releases) and flash with your ESP32 tool of choice.
+Pick whichever flashing route suits you — all three are on the
+[Releases](../../releases) page.
 
-**Option 2 — build from source:** Arduino IDE or PlatformIO. Install ESP32 board
-support and the **M5Cardputer** library (pulls in M5Unified/M5GFX), select the
-*M5Cardputer* board (or ESP32S3 Dev Module with USB CDC on boot), open
-`Microgroove.ino`, flash.
+**Option 1 — pre-built binary:** grab `microgroove.bin` (a merged image) and
+flash it to offset `0x0` with esptool
+(`esptool.py write_flash 0x0 microgroove.bin`) or any ESP32-S3 flashing tool.
+
+**Option 2 — Arduino IDE (from the release zip):** download
+`Microgroove_source.zip`, unzip it (keep the folder named `Microgroove`), open
+`Microgroove.ino`, install the **M5Cardputer** library (pulls in M5Unified/M5GFX),
+select the *M5Cardputer* board (or ESP32S3 Dev Module with USB CDC on boot), and
+Upload. A `HOW_TO_FLASH.txt` is included in the zip.
+
+**Option 3 — build from source (this repo):** clone it and open `Microgroove.ino`
+in the Arduino IDE, or use PlatformIO:
 
 ```ini
 [env:m5stack-cardputer]
@@ -54,8 +62,9 @@ build_flags = -DESP32S3 -DARDUINO_USB_CDC_ON_BOOT=1 -DARDUINO_USB_MODE=1
 lib_deps = M5Cardputer=https://github.com/m5stack/M5Cardputer
 ```
 
-Then copy [`factory-sd/groovebox/`](factory-sd/) to a FAT32 microSD for the demo
-project and the CC0 sample pack. Power on → hold **LOAD** → tap **SONG** → **PLAY**.
+**Then, for the demo + samples:** copy either the release's
+`Microgroove_SD_card.zip` contents or [`factory-sd/groovebox/`](factory-sd/) to
+the root of a FAT32 microSD. Power on → hold **LOAD** → tap **SONG** → **PLAY**.
 No card? Hold **LOAD+SAVE** together for a built-in demo.
 
 ## The shell
