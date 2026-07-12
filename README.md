@@ -1,6 +1,5 @@
 <p align="center">
-  <img src="docs/media/hero.gif" alt="Microgroove — power on to playing in 10 seconds" width="640"><br>
-  <!-- TODO: hero.gif = the 10-second cold-open clip (shot 1), your #1 conversion asset -->
+  <img src="docs/hero.jpg" alt="Microgroove — a pocket groovebox for the M5Stack Cardputer-ADV" width="640">
 </p>
 
 # Microgroove
