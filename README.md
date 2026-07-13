@@ -70,7 +70,7 @@ No card? Hold **LOAD+SAVE** together for a built-in demo.
 ## The shell
 
 Print files, keycap label sheet (v6), and assembly guide:
-**MakerWorld** <!-- TODO: link --> · **Printables** <!-- TODO: link --> · [`hardware/`](hardware/)
+[**MakerWorld**](https://makerworld.com/en/models/3046012-microgroove-diy-pocketable-groovebox-sampler) · [`hardware/`](hardware/)
 
 ## Keys at a glance
 
